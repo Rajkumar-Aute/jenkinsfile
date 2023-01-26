@@ -3,8 +3,8 @@ USER root
 
 # install docker
 RUN apt update \
-    apt install -y sudo curl \
-        curl -fL https://get.docker.com -o get-docker.sh \
+    apt install -y sudo curl
+RUN curl -fL https://get.docker.com -o get-docker.sh \
         sh get-docker.sh \
         sudo usermod -aG docker jenkins \
         sudo apt-get update \
