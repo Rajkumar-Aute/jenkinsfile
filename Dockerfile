@@ -6,8 +6,8 @@ RUN apt-get update && apt install -y sudo curl
 RUN curl -fL https://get.docker.com -o get-docker.sh \
         sh get-docker.sh \
         sudo usermod -aG docker jenkins \
-        sudo apt-get update \
-        sudo apt-get install docker-compose-plugin
+        # sudo apt-get update  && \
+        # sudo apt-get install docker-compose-plugin
 
 #    apt-get -y install apt-transport-https \
 #    ca-certificates \
