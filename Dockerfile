@@ -7,7 +7,7 @@ apt-get -y install apt-transport-https \
     ca-certificates \
     curl \
     gnupg2 \
-    software-properties-common && \
+    software-properties-common
 #curl -fsSL https://get.docker.com -o get-docker.sh \
 #    apt-get update && \
 #apt-get -y install docker-ce
