@@ -7,6 +7,7 @@ apt-get -y install apt-transport-https \
     ca-certificates \
     curl \
     gnupg2 \
+    apt-utils \
     software-properties-common
 RUN curl -fsSL https://get.docker.com -o get-docker.sh && \
     sh get-docker.sh && \
