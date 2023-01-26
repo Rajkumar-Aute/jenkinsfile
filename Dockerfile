@@ -2,8 +2,7 @@ FROM jenkins/jenkins
 USER root
 
 # install docker
-RUN apt-get update \
-#    apt install -y sudo curl
+RUN apt-get update && apt install -y sudo curl
 RUN curl -fL https://get.docker.com -o get-docker.sh \
         sh get-docker.sh \
         sudo usermod -aG docker jenkins \
