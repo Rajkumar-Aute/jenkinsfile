@@ -1,2 +1,16 @@
-:q!
-
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/docker
+    build: ./
+    ports:
+      -  "8080:8080"
+    volumes:
+      -  "./jenkins_home:/var/jenkins_home"
+      -  "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      -  net
+    restart: on-failure
+networks:
+  net:
