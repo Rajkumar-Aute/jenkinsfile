@@ -2,11 +2,11 @@ FROM jenkins/jenkins
 USER root
 
 # install docker
-RUN apt-get udpate \
+RUN apt-get udpate && \
     sudo chmod a+r /etc/apt/keyrings/docker.gpg \
     sudo apt-get update \
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin \
-    sudo apt-get update \ 
+    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin && \
+    sudo apt-get update && \ 
     sudo apt-get install docker-compose-plugin
 
 #    apt-get -y install apt-transport-https \
