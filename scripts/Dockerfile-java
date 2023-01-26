@@ -1,4 +1,4 @@
 FROM openjdk:8-jre-alpine
 RUN mkdir /app
-COPY ../../../*.war /app/app.war
+COPY $PWD/javacode/webapp/target/*.war /app/app.war
 CMD java -jar /app/app.war
