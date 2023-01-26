@@ -2,7 +2,8 @@ FROM jenkins/jenkins
 USER root
 
 # install docker
-RUN sudo apt-get update && sudo apt-get upgrade -y && \
+RUN apt-get update && sudo apt-get upgrade -y && \
+    apt-get -y install sudo
     curl -fsSL https://get.docker.com -o get-docker.sh \
     sh get-docker.sh \
     sudo usermod -aG docker jenkins && \
